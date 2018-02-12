@@ -2,7 +2,7 @@ import math
 import itertools
 
 A = (0,0)
-B = (3,4)
+B = (5,5)
 
 x = abs(B[0] - A[0])
 y = abs(B[1] - A[1])
@@ -26,10 +26,8 @@ for i in range(0,len(all_ways)):
     for j in range(0,len(all_ways[i])-1):
         if all_ways[i][j] == all_ways[i][j+1]:#straight
             way_result[0] += 1
-            #print('straight')
         else:#angle
             way_result[1] += 1
-            #print('angle')
     results_set.append(way_result)
 
 point = []
