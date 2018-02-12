@@ -40,7 +40,8 @@ def findRoute(Ax,Ay,Bx,By):
     #ポイントが最大のものを抽出
     best_route_index = [i for i, x in enumerate(point) if x == max(point)]
     #ポイント最大のルートを表示
+    bestRoute = []
     for i in best_route_index:
-        print(all_ways[i])
-findRoute(0,0,4,2)
-findRoute(1,3,4,4)
+        bestRoute.append(all_ways[i])
+    return bestRoute
+print(findRoute(0,0,4,2))
