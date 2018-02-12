@@ -14,7 +14,7 @@ for i in range(0,x):
 for i in range(0,y):
     base_list.append(0)
 
-#base_listから全最短経路をlistで格納
+#base_listから全最短経路をall_waysに格納
 all_ways = list(set(list(itertools.permutations(base_list))))
 results_set = []
 #全ルートに対し、直進,直角の回数を調べ,results_setに格納
