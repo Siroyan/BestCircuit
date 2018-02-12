@@ -31,4 +31,15 @@ for i in range(0,len(all_ways)):
             way_result[1] += 1
             #print('angle')
     results_set.append(way_result)
-    print(way_result)
+
+point = []
+point_str = 1 #直進ポイント
+point_ang = -1 #直角ポイント
+#全ルートに対しポイントをつけ、評価
+for i in range(0,len(all_ways)):
+    point.append( results_set[i][0]*point_str + results_set[i][1]*point_ang )
+#ポイントが最大のものを抽出
+best_route_index = [i for i, x in enumerate(point) if x == max(point)]
+#ポイント最大のルートを表示
+for i in best_route_index:
+    print(all_ways[i])
