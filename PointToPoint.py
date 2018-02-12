@@ -16,13 +16,16 @@ for i in range(0,y):
 
 #base_listから全最短経路をlistで格納
 all_ways = list(set(list(itertools.permutations(base_list))))
-#全ルートに対し、直進,直角の回数を調べる
+results_set = []
+#全ルートに対し、直進,直角の回数を調べ,results_setに格納
 for i in range(0,len(all_ways)):
+    way_result = [0,0]
     for j in range(0,len(all_ways[i])-1):
-        if all_ways[i][j] == all_ways[i][j+1]:
-            #straight
-            print('straight')
-        else:
-            #angle
-            print("angle")
-    print('----------')
+        if all_ways[i][j] == all_ways[i][j+1]:#straight
+            way_result[0] += 1
+            #print('straight')
+        else:#angle
+            way_result[1] += 1
+            #print('angle')
+    results_set.append(way_result)
+    print(way_result)
