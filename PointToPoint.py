@@ -50,13 +50,10 @@ def getCoordinates(Ax,Ay,Bx,By):
     for i in best_route_index:
         bestRoute.append(all_ways[i])
 #移動の1,0を座標に変換
-def getCoordinates():
-    for i in range (0,7):
+    for i in range (0,7):#TODO
         if bestRoute[0][i] == 1:
             Ax += 1
         else:
             Ay += 1
         coordinates.append([Ax,Ay])
     return coordinates
-
-findRoute(Ax,Ay,Bx,By)
