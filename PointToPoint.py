@@ -7,8 +7,8 @@ Ax = 0
 Ay = 0
 Bx = 3
 By = 4
-#最適なルートを選択
-def findRoute(Ax,Ay,Bx,By):
+
+def getCoordinates(Ax,Ay,Bx,By):
     A = (Ax,Ay)
     B = (Bx,By)
 
