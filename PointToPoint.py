@@ -1,6 +1,12 @@
 import math
 import itertools
 
+bestRoute = []
+coordinates = []
+Ax = 0
+Ay = 0
+Bx = 3
+By = 4
 def findRoute(Ax,Ay,Bx,By):
     A = (Ax,Ay)
     B = (Bx,By)
@@ -40,8 +46,15 @@ def findRoute(Ax,Ay,Bx,By):
     #ポイントが最大のものを抽出
     best_route_index = [i for i, x in enumerate(point) if x == max(point)]
     #ポイント最大のルートを表示
-    bestRoute = []
     for i in best_route_index:
         bestRoute.append(all_ways[i])
-    return bestRoute
-print(findRoute(0,0,4,2))
+
+findRoute(Ax,Ay,Bx,By)
+#移動の1,0を座標に変換
+for i in range (0,7):
+    if bestRoute[0][i] == 1:
+        Ax += 1
+    else:
+        Ay += 1
+    coordinates.append([Ax,Ay])
+print(coordinates)
